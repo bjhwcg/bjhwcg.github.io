@@ -810,7 +810,7 @@ pre code {
   list-style: none;
 }
 .sidebar-menu .menu-links {
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-transform: uppercase;
   display: block;
   text-decoration: none;
@@ -1041,16 +1041,5 @@ img.post-image, img.page-img {
   .previous, .next {
     display: block;
   }
-}
-
-/*********************************************************/
-#head-picture{
-    width: 70%;
-    position: relative;
-    left: 15%;
-}
-
-.sidebar-logo {
-    text-align: center;
 }
 

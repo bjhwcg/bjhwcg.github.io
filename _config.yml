@@ -6,17 +6,17 @@ description: > # this means to ignore newlines until "baseurl:"
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 permalink: ':title/'
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://sunnsta.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Social
 facebook: #Add your Facebook
 twitter: #Add your Twitter
 google-plus: #Add your Google+
-github: #Add your Github
+github: SunnSta
 
 # Contact form
-email: #your-email@domain.com
+email: mengmengzjxs@163.com
 
 # Comments
 discus-identifier: # Add your Disqus identifier
