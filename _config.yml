@@ -10,9 +10,6 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://sunnsta.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Social
-facebook: #Add your Facebook
-twitter: #Add your Twitter
-google-plus: sunnsta1980@gmail.com
 github: SunnSta
 
 # Contact form
