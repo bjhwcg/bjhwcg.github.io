@@ -81,6 +81,13 @@
     font-weight: bold;
     line-height: 40px;
 }
+#practice-introduction {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 40px;
+}
 .post-brief {
     text-align: center;
 }

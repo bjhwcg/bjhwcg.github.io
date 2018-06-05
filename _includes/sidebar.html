@@ -22,6 +22,12 @@
 	  {{ category | last | size }}篇</a></li>
 	  {% endif %}
 	  {% endfor %}
+	  <li class="menu-items"><a id="practice-button" class="menu-links" href="{{site.baseurl}}/Practice">Practice &nbsp;|&nbsp;
+	  {% for category in site.categories %}
+	  {% if category[0] == "Practice" %}
+	  {{ category | last | size }}篇</a></li>
+	  {% endif %}
+	  {% endfor %}
     </menu>
 
     <div class="sidebar-social">                   
