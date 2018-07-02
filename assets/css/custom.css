@@ -1,3 +1,15 @@
+.content-simple {
+    position: relative;
+    max-width: 68rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding: 4rem 1rem;
+}
+.wrap-content-simple {
+    background-color: #fff;
+    padding: 4rem;
+}
+
 #head-picture {
     width: 60%;
     position: relative;
