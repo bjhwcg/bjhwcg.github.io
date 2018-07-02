@@ -305,11 +305,11 @@ for A in R {
 
 窗口大小30%（相对于图片的短边），颜色容差15%（相对于100），步长为窗口大小的15%，迭代3次，3层金字塔的结果。
 
-![图像分割结果](../assets/img/simpleimg/pyramid.JPG)
+![图像分割结果](../assets/img/simpleimg/pyramid.jpg)
 
 ##### ③ 细节层测描绘结果（未进行平滑处理）
 
-![图像分割结果](../assets/img/simpleimg/tmp.JPG)
+![图像分割结果](../assets/img/simpleimg/tmp.jpg)
 
 ##### ④ 界面链接
 
