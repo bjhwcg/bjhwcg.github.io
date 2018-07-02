@@ -465,10 +465,12 @@ function MidFilter(src) {
             //取出rgb的9个数
             var datar = [tmp.r._data[i][j], tmp.r._data[i + 1][j], tmp.r._data[i + 2][j],
                 tmp.r._data[i][j + 1], tmp.r._data[i + 1][j + 1], tmp.r._data[i + 2][j + 1],
-                tmp.g._data[i][j + 2], tmp.g._data[i + 1][j + 2], tmp.g._data[i + 2][j + 2]];
+                tmp.r._data[i][j + 2], tmp.r._data[i + 1][j + 2], tmp.r._data[i + 2][j + 2]];
+
             var datag = [tmp.g._data[i][j], tmp.g._data[i + 1][j], tmp.g._data[i + 2][j],
             tmp.g._data[i][j + 1], tmp.g._data[i + 1][j + 1], tmp.g._data[i + 2][j + 1],
                 tmp.g._data[i][j + 2], tmp.g._data[i + 1][j + 2], tmp.g._data[i + 2][j + 2]];
+
             var datab = [tmp.b._data[i][j], tmp.b._data[i + 1][j], tmp.b._data[i + 2][j],
             tmp.b._data[i][j + 1], tmp.b._data[i + 1][j + 1], tmp.b._data[i + 2][j + 1],
                 tmp.b._data[i][j + 2], tmp.b._data[i + 1][j + 2], tmp.b._data[i + 2][j + 2]];

@@ -1,12 +1,13 @@
 ---
 layout: simple
-title: "Simple Image"
+title: Simple Image
+img: simpleimg/title1.jpg
 date: 2018-07-01
-description: Computer graphic homework.
+description: CG homework.
 category: Mess
 permalink: /:categories/:title.html
 ---
-[TOC]
+
 
 # 一、原文
 
@@ -306,11 +307,32 @@ for A in R {
 
 ![图像分割结果](../assets/img/simpleimg/pyramid.JPG)
 
-##### ③ 细节层测描绘结果
+##### ③ 细节层测描绘结果（未进行平滑处理）
+
+![图像分割结果](../assets/img/simpleimg/tmp.JPG)
+
+##### ④ 界面链接
+
+[https://sunnsta.github.io/mess/mess-simpleimg0.html](https://sunnsta.github.io/mess/mess-simpleimg0.html)
+
+##### ⑤ 源码链接
+
+JS文件：
+
+[https://github.com/SunnSta/SunnSta.github.io/tree/master/assets/scripts/simpleimg](https://github.com/SunnSta/SunnSta.github.io/tree/master/assets/scripts/simpleimg)
+
+- main.js：界面交互代码
+
+- CannyEdge.js：边缘检测代码
+
+- MeanshiftSegment.js：图像颜色分割、金字塔构造、孩子列表构造代码
+
+- Render.js：视觉模型相关代码
 
 
+<br>
 
-
+  
 
 # 四、感想
 
@@ -326,8 +348,10 @@ for A in R {
 
 ​        最后确实做得并不够好也不够完整，自己的编程水平、调试以及寻找错误的能力还不够，由于这个原因作业写得太慢了，对数据结构也没有很好的安排。全局的几个结构中大多是嵌套数组，因此被下标困扰得十分头疼。比较满意的就是边缘检测的实现，感觉运行效率不算是很差而且边缘检测模块的交互上自我评价也应该说是还过得去。期间收获大概是初次使用了d3.js的折线图功能。而meanshift部分阅读了OpenCV的代码，学习到了一些优化和简化计算的方法，比如减少乘法和除法计算的技巧。这次作业遗憾很多，如果能有更多时间就好了，但是不管是该报告的排版还是最后的界面，我都会在之后争取改到令自己满意。
 
+<br>
 
+# 五、个人信息
 
+姓名：吴萌
 
-
-
+学号：3150102426

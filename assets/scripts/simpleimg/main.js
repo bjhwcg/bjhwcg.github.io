@@ -1,8 +1,8 @@
 /*依赖jquery和CannyEdge*/
 
 //限定能处理的图片大小，减少计算量
-var max_w = 800;
-var max_h = 600;
+var max_w = 300;
+var max_h = 300;
 //现存图片
 //var ctx;
 var h=300;

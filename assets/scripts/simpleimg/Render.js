@@ -1,8 +1,8 @@
 //所需的全局变量
 var finalImg;
 var fixregion;
-var fixfamily;
 var cscale = 1;
+
 function ShowPruneImg(cvs, fixx, fixy, fixr, rate, py, child, neighbor, cscale, cannyImg) {
     finalImg = {
         r: math.zeros(cvs.height, cvs.width),
@@ -10,12 +10,13 @@ function ShowPruneImg(cvs, fixx, fixy, fixr, rate, py, child, neighbor, cscale, 
         b: math.zeros(cvs.height, cvs.width)
     };
     fixregion = FixToRegion(fixx, fixy, fixr, rate, py, child);
-    CalFixRegionFamily(child);
+    CalFixRegionFamily(fixregion);
     //console.log(fixregion);
-    PruneSection(py, child, neighbor, rate, fixr, cscale);
-    for (var i = 0; i < cvs.height; i++) {
-        for (var j = 0; j < cvs.weight; j++) {
-            if (cannyImg.r._data[i][j] == 0) {
+    PruneSection(py, child, neighbor, rate, fixr, cscale);//这个 超级慢 怎么办哇……
+    //绘制线条
+    for (var i = 0; i < rslt.size()[0]; i++) {
+        for (var j = 0; j < rslt.size()[1]; j++) {
+            if (rslt._data[i][j] == 0) {
                 finalImg.r._data[i][j] = 0;
                 finalImg.g._data[i][j] = 0;
                 finalImg.b._data[i][j] = 0;
@@ -24,6 +25,7 @@ function ShowPruneImg(cvs, fixx, fixy, fixr, rate, py, child, neighbor, cscale, 
     }
     MatrixToImg(finalImg, cvs);
 }
+
 //绘制图片
 function PruneSection(py, child, neighbor, rate, fixr, cscale){
     //从爸爸开始搜索
@@ -118,16 +120,21 @@ function CalculateEss(level,id) {
         return 0.1;
     }
 }
-function CalFixRegionFamily(child) {
-    fixfamily = new Array();
-    fixfamily.push(fixregion);
-    //push孩子
-    if (fixregion[0] > 0 && fixregion[0] < child.length-1) {
-        for (var i = 0; i < child[fixregion[0] - 1][fixregion[1]].length; i++) {
-            fixfamily.push([fixregion[0] - 1, child[fixregion[0] - 1][fixregion[1]][i]]);
+
+//计算fixation相关的区域亲友团
+var fixfamily = new Array();
+function CalFixRegionFamily(fix) { 
+    fixfamily.push(fix);
+    //先push孩子
+    var level = fix[0];
+    var id = fix[1];
+    if (level > 0) {
+        for (var i = 0; i < child[level - 1][id].length; i++) {
+            CalFixRegionFamily([level - 1, child[level - 1][id][i]]);
         }
     }
 }
+
 //计算某个region和周围的对比度
 function CalculateContrast(py, child, neighbor,level, id) {
     var weightsum = 0;
