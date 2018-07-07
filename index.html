@@ -5,14 +5,18 @@ layout: default
 {% for post in paginator.posts %}
 <article class="main-article">
   <div class="wrap-content">
+  <div>今天不能看，明天也不能看 (╯‵□′)╯ boom!•••*～●</div>
+	<!--
     <header class="header-article">
       <h2 class="title-article"><a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a></h2>
       <div class="post-date"><span>{{post.date | date: '%Y, %b %d'}}&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
     </header>
+	
     {% if post.img %}
        <img class="post-image" src={{ "/assets/img/" | prepend: site.baseurl | append: post.img }} alt="{{post.title}}">
     {% endif %}
     <p class="post-brief">{{post.description}}<br /> <a class="more" href="{{post.url | prepend: site.baseurl}}">(Read more...)</a></p>
+	-->
   </div>
 </article>
 {% endfor %}
