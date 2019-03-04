@@ -5,7 +5,8 @@ img: simpleimg/title1.jpg
 date: 2018-07-01
 description: CG homework.
 category: Mess
-permalink: /:categories/:title.html
+permalink: /:categories/:title.html 
+notshow: 1
 ---
 
 
