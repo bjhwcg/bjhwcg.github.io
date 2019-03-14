@@ -1,332 +1,46 @@
-.bg{
-    background-color:#ecf3f3;
+.my-hr-0 {
+    width: 90%;
+    border: none;
+    border-top: solid 1px rgba(179, 179, 179, 1);
 }
-.center-h-box {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
+#littlewall-blackwhite-pic .my-picture-square{
+    width: 30%;
+    margin-right: 1%;
+    margin-left: 1%;
 }
-.center-v-box {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+#handoutpaper-pic1{
+    width: 30%;
+    margin-right: 2%;
+    margin-left: 2%
 }
-/*画布*/
-#my-circle-svg {
-    margin-top: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-bottom:50px;
-    position: absolute;
-    width: 500px;
-    height: 300px;
-    border: 10px solid rgba(0,0,0,0);
+#handoutpaper-pic2{
+    width: 58%;
+    margin-right: 2%;
+    margin-left: 2%
 }
-.my-cvs {
-    margin-top: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-bottom: 50px;
-    width: 500px;
-    height: 300px;
-    border: 10px solid #2d2a2a;
-    -webkit-transition: all .35s;
-    transition: all .35s;
+#littlewall-bookpage-pic-part1 .my-picture-square{
+    width: 30%;
+    margin-right: 1%;
+    margin-left: 1%;
 }
-#canvas-area-2 {
-    visibility: hidden;
+#littlewall-bookpage-pic-part2 .my-picture-square{
+    width: 30%;
+    margin-right: 1%;
+    margin-left: 1%;
 }
-
-#my-canvas-2 {
-    margin-top: 0px;
-    height: 0px;
-    width: 0px;
-    transition: all .35s;
+#littlewall-bookpage-pic-part3 .my-picture-square{
+    width: 46%;
+    margin-right: 1.8%;
+    margin-left: 1%;
 }
-#canvas-area-3 {
-    visibility: hidden;
+#littlewall-webface-pic .my-picture-square{
+    width: 46%;
+    margin-right: 1.8%;
+    margin-left: 1%;
 }
-#my-canvas-3 {
-    margin-top: 0px;
-    height: 0px;
-    width: 0px;
-    transition: all .35s;
-}
-/*button区域*/
-#button-area-2 {
-    position: relative;
-    width: 200px;
-}
-
-#button-area-1 {
-    position: relative;
-    width: 200px;
-}
-
-#button-area {
-    margin: 30px;
-    height: 130px;
-}
-/*input-img的大小要保持和input-img-mask大小的一致*/
-#input-img {
-    opacity: 0;
-    position: absolute;
-    height: 50px;
-    width: 170px;
-}
-#input-img-mask {
-    position: absolute;
-}
-#generate-rslt {
-    position: absolute;
-    top: 75px;
-}
-#generate-edge {
-    position: absolute;
-}
-#generate-color {
-    position: absolute;
-    top: 75px;
-}
-.button {
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    height: 30px;
-    width: 120px;
-    box-shadow: none;
-    padding: 10px 25px;
-    color: white;
-    text-transform: uppercase;
-    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
-    text-decoration: none;
-    background: #15F3A8;
-    -webkit-transition: all .35s;
-    transition: all .35s;
-}
-a {
-    color: #15f3a8;
-    text-decoration: none;
-    text-align: center;
-}
-
-a:hover {
-    text-decoration: none;
-    color: #1bdc9b;
-}
-/*分析区域*/
-#anals-area {
-    transition: all .35s;
-    visibility: hidden;
-    height: 0px;
-    margin: 30px;
-}
-/*调整区域*/
-#adjust-area {
-    height: 150px;
-    margin: 30px;
-}
-/*高斯调整区域*/
-.adj-cvs {
-    height: 120px;
-    width: 120px;
-    background-color: #15F3A8;
-    border: 2px solid #2d2a2a;
-}
-#my-gauss {
-    position: absolute;
-}
-#gauss-area {
-    position: relative;
-    height: 150px;
-    width: 150px;
-    margin-right: 10px;
-    margin-left: 10px;
-}
-/*双阈值调整区域*/
-#threshold-area {
-    position: relative;
-    height: 150px;
-    width: 150px;
-    margin-right: 10px;
-    margin-left: 10px;
-}
-/*meanshift调整区域*/
-#meanshift-area {
-    position: relative;
-    width: 270px;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-#my-ms-wrap {
-    height: 150px;
-}
-#my-ms {
-    height: 72px;
-    transition: all .35s;
-}
-/*调整区域的各种滑条*/
-.result-text {
-    height: 20px;
-    width: 20px;
-    background-color: whitesmoke;
-    border: 1px solid #999;
-    text-align: center;
-}
-#kernel-result {
-    position: absolute;
-    top: 125px;   
-}
-
-#sigma-result { 
-    position: absolute;
-    top: 0px;
-    right: 0px;
-}
-#min-result {
-    position: absolute;
-    top: 30px;
-    right: 5px;
-    width: 35px;
-}
-#max-result {
-    position: absolute;
-    top: 60px;
-    right: 5px;
-    width: 35px;
-}
-#short-result {
-    position: absolute;
-    top: 90px;
-    right: 5px;
-    width: 35px;
-}
-
-#kernel-sliderBar {
-    position: absolute;
-    top: 125px;
-    width: 95px;
-    height: 20px;
-    left: 25px;
-}
-#sigma-sliderBar {
-    position: absolute;
-    top: 60px;
-    width: 95px;
-    height: 20px;
-    left: 88px;
-    transform: rotate(90deg);
-}
-#min-sliderBar {
-    position: absolute;
-    top: 30px;
-    width: 95px;
-    height: 20px;
-    left: 5px;
-}
-#max-sliderBar {
-    position: absolute;
-    top: 60px;
-    width: 95px;
-    height: 20px;
-    left: 5px;
-}
-#short-sliderBar {
-    position: absolute;
-    top: 90px;
-    width: 95px;
-    height: 20px;
-    left: 5px;
-}
-
-/*折线图部分*/
-path {
-    stroke: #2d2a2a;
-    stroke-width: 2;
-    fill: #2d2a2a;
-}
-text {
-    font-size:10px;
-}
-.axis path {
-    fill: none;
-    stroke: grey;
-    stroke-width: 1;
-    shape-rendering: crispEdges;
-}
-#hist-y-tag, #hist-x-tag{
-    font-size:15px;
-    font-weight:700;
-} 
-
-/*meanshift调节区域*/
-#ms-sp-sliderBar {
-    position: absolute;
-    width: 95px;
-    height: 20px;
-    top: 10px;
-    left: 130px;
-}
-#meanshift-area {
-    position: relative;
-    width: 270px;
-}
-#ms-sr-sliderBar {
-    position: absolute;
-    width: 95px;
-    height: 20px;
-    top: 35px;
-    left: 130px;
-}
-
-#ms-dist-sliderBar {
-    position: absolute;
-    width: 95px;
-    height: 20px;
-    left: 130px;
-    top: 60px;
-}
-#ms-maxit-sliderBar {
-    position: absolute;
-    width: 95px;
-    height: 20px;
-    top: 85px;
-    left: 130px;
-}
-#ms-layer-sliderBar {
-    position: absolute;
-    width: 95px;
-    height: 20px;
-    top: 115px;
-    left: 130px;
-}
-#ms-sp-result {
-    position: absolute;
-    top: 10px;
-    right: 0px;
-    width: 35px;
-}
-#ms-sr-result {
-    position: absolute;
-    right: 0px;
-    top: 35px;
-    width: 35px;
-}
-#ms-dist-result {
-    position: absolute;
-    width: 35px;
-    top: 60px;
-    right: 0px;
-}
-#ms-maxit-result {
-    position: absolute;
-    right: 0px;
-    top: 85px;
-    width: 35px;
-}
-#ms-layer-result {
-    position: absolute;
-    right: 0px;
-    top: 115px;
-    width: 35px;
+#littlewall-flash-pic .my-picture-square{
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 600px;
+    height: 400px;
 }
