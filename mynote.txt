@@ -1,4 +1,4 @@
-﻿## 搭建git博客的方式
+## 搭建git博客的方式
 
 1.可以直接按照html+css的组织来写界面😲
 （啥时候有空可以试试，有点懒）
@@ -31,6 +31,9 @@ gem install jekyll
 win环境经历各种报错，我觉得采用ruby安装法是个失误。
 后来发现mac自带ruby，自带gem……呵呵……但是这种情况下我尝试安装jekyll还是失败了，大概就是惨。
 
+2019年补充：
+mac更新系统之后忽然解决了之前安装jekyll失败的问题，不知道什么原理。
+
 ## 挑选模板
 
 看中了fresh模板，嗯果然还是绿色的好。
@@ -59,6 +62,13 @@ cd到工程目录
 bundle exec jekyll serve
 默认是打开localhost:4000显示效果吧，具体位置看cmd下面的提示。
 
+2019年补充：
+提示模块缺失的时候应运行：
+bundle install
+但是由于上不了外网，提示连接不到host，于是用了国内镜像。
+详情见https://gems.ruby-china.com
+Gemfile和Gemfile.lock第一行的source改成https://gems.ruby-china.com，就可以用镜像地址安装了。
+
 ## 部署到网页
 
 可方便了，就是直接push就行了
@@ -67,6 +77,11 @@ git commit -m "blabla"
 git push origin master
 根本不用像某些网上写的那样开一个gh-page分支啊
 感觉看一些资料写得特别复杂，其实就简单几步啊，甚至直接用git desktop，不用命令行也没什么问题？奇怪……
+
+## 更新Gemfile
+
+如果github邮件提示gemfile定义的版本落后，应该是运行一下bundle update就好了。
+如果很长时间没反应最后提示连接不到host，见上面镜像问题。
 
 ## 注意点
 

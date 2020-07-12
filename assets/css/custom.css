@@ -52,6 +52,31 @@
     font-weight: bold;
 }
 
+@font-face {
+font-family: HYHeiLiZhiTiJ;
+src: url('../fonts/font-hy/fonts/HYHeiLiZhiTiJ.ttf');
+}
+@font-face {
+font-family: HYShangWeiXiaoShiHouW;
+src: url('../fonts/font-hy/fonts/HYShangWeiXiaoShiHouW.ttf');
+}
+.my-txt-peach {
+    font-family: HYHeiLiZhiTiJ;
+    text-align: center;
+    font-size: 30px;
+    color: rgba(243, 132, 175, 1);
+    margin: 25px;
+    line-height: 30px;
+    font-weight: bold;
+}
+.my-txt-sky {
+    font-family: HYShangWeiXiaoShiHouW;
+    text-align: center;
+    font-size: 30px;
+    color: rgba(129, 183, 215, 1);
+    margin: 25px;
+    line-height: 30px;
+}
 .my-txt-1 {
     text-align: center;
     font-size: 15px;
@@ -102,6 +127,9 @@
 }
 .post-brief {
     text-align: center;
+}
+.my-picture-square{
+    border: solid 10px rgba(104, 102, 101, 1);
 }
 
 
