@@ -75,11 +75,12 @@ git push origin master
 所以我就另外加了一个css文件……
 html里面link还是要照常加的
 
-有个坑找了一早上的bug真是qi si wo le：
+有个坑找了一早上的bug真是qi shi wo le：
 	所有page都是utf-8编码方式而且是不带BOM的那种。
 	系统自带的“新建txt”在空文本的情况下保存是utf-8无BOM，
 	但是如果是有文本的情况下另存为utf-8，则有BOM。
 	有BOM的情况下生成page是失败的，因为附加的字节影响了文件头。
 	可以在notepad++里面encoding里面看编码和转换……
+	然后！VS保存会默认加BOM……
 
 
