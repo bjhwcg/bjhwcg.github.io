@@ -28,10 +28,20 @@ window.onload = function hello() {
             
             //添加子选项
             var t = this.parentNode.parentNode.parentNode;
-            $('<div class="children"><div class="children-head"><div class="children-node"><input type="text" value="选项" data-toggle="tooltip" data-placement="right" title="输入选项名称"><input type="text" value="对白" data-toggle="tooltip" data-placement="right" title="输入对白提示"><button class="add-node" type="button" data-toggle="tooltip" data-placement="right" title="添加后续选项">+</button></div></div><div class="children-area"></div>').appendTo($(t).children(".children-area"));
+            $('<div class="children"><div class="children-head"><div class="children-node"><button class="del-node" type="button" data-toggle="tooltip" data-placement="right" title="删除选项">-</button><input type="text" value="选项" data-toggle="tooltip" data-placement="right" title="输入选项名称"><input type="text" value="对白" data-toggle="tooltip" data-placement="right" title="输入对白提示"><button class="add-node" type="button" data-toggle="tooltip" data-placement="right" title="添加后续选项">+</button></div></div><div class="children-area"></div>').appendTo($(t).children(".children-area"));
             
-            //重载一遍……
+            //不讲性能地重载一遍……
             hello();
+        }
+    });
+    
+    //点击减号按钮
+    var a_arr = $(".del-node");
+    a_arr.each(function () {
+        this.onclick = function () {           
+            //删除选项
+            $(this.parentNode.parentNode.parentNode).remove();
+            $(this.parentNode.parentNode.parentNode).empty();
         }
     });
 }
