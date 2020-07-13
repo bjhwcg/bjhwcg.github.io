@@ -20,7 +20,8 @@ window.onload = function hello() {
             }
         };
     });
-    
+
+
     //点击加号按钮
     var a_arr = $(".add-node");
     a_arr.each(function () {
@@ -35,6 +36,9 @@ window.onload = function hello() {
         }
     });
     
+
+    
+    
     //点击减号按钮
     var a_arr = $(".del-node");
     a_arr.each(function () {
@@ -43,5 +47,20 @@ window.onload = function hello() {
             $(this.parentNode.parentNode.parentNode).remove();
             $(this.parentNode.parentNode.parentNode).empty();
         }
+        //连线
+        var y0 = $(this).offset().top;
+        var x0 = $(this).offset().left;
+        var padd = $(this.parentNode.parentNode.parentNode).find(".add-node");
+        var y1 = $(padd).offset().top;
+        var x1 = $(padd).offset().left;
+        $('canvas')[0].getContext('2d').beginPath();
+        $('canvas')[0].getContext('2d').strokeStyle = 'blue';
+        $('canvas')[0].getContext('2d').lineWidth = 20;
+        $('canvas')[0].getContext('2d').moveTo(x0, y0);
+        $('canvas')[0].getContext('2d').lineTo(x1, y1);
+        $('canvas')[0].getContext('2d').stroke();
     });
+    
+    
+    
 }

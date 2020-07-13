@@ -20,14 +20,19 @@ notshow: 1
     <script type="text/javascript" src="../../assets/scripts/debatenode.js"></script>
 </head>
 <body class="bg">
-    <div id="debate" class="debate">
-        <div id="head-area" class="head-area">
-            <div id="debate-head" class="debate-head">
-                <input type="text" id="debate-head-input1" value="输入辩论组ID" data-toggle="tooltip" data-placement="right" title="输入辩论组ID">
-                <input type="text" id="debate-head-input2" value="输入辩论说明" data-toggle="tooltip" data-placement="right" title="输入辩论说明">
-                <button class="add-node" type="button" data-toggle="tooltip" data-placement="right" title="添加选项">+</button>
+    <div id="area" position="relative">
+        <div id="debate" class="debate">
+            <div id="head-area" class="head-area">
+                <div id="debate-head" class="debate-head">
+                    <input type="text" id="debate-head-input1" value="输入辩论组ID" data-toggle="tooltip" data-placement="right" title="输入辩论组ID">
+                    <input type="text" id="debate-head-input2" value="输入辩论说明" data-toggle="tooltip" data-placement="right" title="输入辩论说明">
+                    <button class="add-node" type="button" data-toggle="tooltip" data-placement="right" title="添加选项">+</button>
+                </div>
             </div>
+            <div id="children-area" class="children-area"></div>
         </div>
-        <div id="children-area" class="children-area">
+        <div id="line-area" position="absolute" top="0px" z-index=1>
+            <canvas id="line-canvas"></canvas>
+        </div>
     </div>
 </body>
