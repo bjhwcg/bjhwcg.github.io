@@ -77,16 +77,25 @@ src: url('../fonts/font-hy/fonts/HYShangWeiXiaoShiHouW.ttf');
     margin: 25px;
     line-height: 30px;
 }
+/*居中正文*/
 .my-txt-1 {
     text-align: center;
     font-size: 15px;
     margin: 25px;
     line-height: 30px;
 }
+/*开头空两格左对齐正文*/
 .my-txt-2 {
 	text-indent: 2em;
     font-size: 15px;
     margin: 25px;
+    line-height: 30px;
+}
+/*居中左对齐正文*/
+.my-txt-3 {
+    font-size: 15px;
+    margin: 35px;
+    margin-left: 35%;
     line-height: 30px;
 }
 #about-head-pictere-frame {
