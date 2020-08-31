@@ -216,7 +216,7 @@ input::-ms-clear {
     margin-right: 37px;
     margin-top: 1px;
 }
-#line-canvas{
+#line-area{
     height: 100%;
     width: 100%;
 }

@@ -33,26 +33,25 @@ window.onload = function hello() {
             
             //不讲性能地重载一遍……
             hello();
-        }
+        };
     });
-    
 
     
     
     //点击减号按钮
-    var a_arr = $(".del-node");
-    a_arr.each(function () {
+    var d_arr = $(".del-node");
+    d_arr.each(function () {
         this.onclick = function () {           
             //删除选项
             $(this.parentNode.parentNode.parentNode).remove();
             $(this.parentNode.parentNode.parentNode).empty();
         }
         //连线
-        var y0 = $(this).offset().top;
-        var x0 = $(this).offset().left;
-        var padd = $(this.parentNode.parentNode.parentNode).find(".add-node");
-        var y1 = $(padd).offset().top;
-        var x1 = $(padd).offset().left;
+        var y0 = getOffsetTop(this);
+        var x0 = getOffsetLeft(this);
+        var padd = $(this.parentNode.parentNode.parentNode).find(".children-area");
+        var y1 = getOffsetTop($(padd)[0]);
+        var x1 = getOffsetLeft($(padd)[0]);
         $('canvas')[0].getContext('2d').beginPath();
         $('canvas')[0].getContext('2d').strokeStyle = 'blue';
         $('canvas')[0].getContext('2d').lineWidth = 20;
@@ -60,7 +59,13 @@ window.onload = function hello() {
         $('canvas')[0].getContext('2d').lineTo(x1, y1);
         $('canvas')[0].getContext('2d').stroke();
     });
+}
     
     
-    
+
+function getOffsetTop(el) {
+ return el.offsetParent ? el.offsetTop + getOffsetTop(el.offsetParent) : el.offsetTop;
+}
+function getOffsetLeft(el) {
+ return el.offsetParent ? el.offsetLeft + getOffsetTop(el.offsetParent) : el.offsetLeft;
 }
