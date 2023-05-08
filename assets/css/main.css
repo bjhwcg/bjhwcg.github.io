@@ -913,11 +913,11 @@ pre code {
   font-size: 0.8rem;
   text-transform: uppercase;
   font-family: monospace;
-  color: lightgreen;
+  color: lightpink;
 }
 .main-article .more, .page-article .more, .post .more {
   text-decoration: none;
-  color: lightgreen;
+  color: lightpink;
 }
 
 img.post-image, img.page-img {
